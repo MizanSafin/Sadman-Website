@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+    <script src="https://kit.fontawesome.com/e792429619.js" crossorigin="anonymous"></script>
+</head>
+<body>
+     <div class="mrq">
+      <marquee behavior="" direction=""><h1>I am Sadman Safin c/o-Md Mizanur Rahman.My Mother name is Shahanaj Pervin, My birthDate is 7 February 2022 and I am 20 days old</h1></marquee>
+     </div>
+     <hr>
+    <div class="allSlider">
+        
+        <div class="slider active">
+            <div class="overlay"></div>
+            <div class="info">
+                <h2>Sadman Safin</h2>
+                <p>I am Sadman Safin c/o-Md Mizanur Rahman.My Mother name is Shahanaj Pervin, My birthDate is 7 February 2022 and I am 20 days old</p>
+            </div>
+            <img src="/img/Safin-4.jpg" alt="">
+        </div>
+        <div class="slider">
+            <div class="overlay"></div>
+            <div class="info">
+                <h2>Sadman Safin</h2>
+                <p>I am Sadman Safin c/o-Md Mizanur Rahman.My Mother name is Shahanaj Pervin, My birthDate is 7 February 2022 and I am 20 days old</p>
+            </div>
+            <img src="/img/Safin-1.jpg" alt="">
+        </div>
+        <div class="slider">
+            <div class="overlay"></div>
+            <div class="info">
+                <h2>Sadman Safin</h2>
+                <p>I am Sadman Safin c/o-Md Mizanur Rahman.My Mother name is Shahanaj Pervin, My birthDate is 7 February 2022 and I am 20 days old</p>
+            </div>
+            <img src="/img/Safin-2.jpg" alt="">
+        </div>
+        <div class="slider">
+            <div class="overlay"></div>
+            <div class="info">
+                <h2>Sadman Safin</h2>
+                <p>I am Sadman Safin c/o-Md Mizanur Rahman.My Mother name is Shahanaj Pervin, My birthDate is 7 February 2022 and I am 20 days old</p>
+            </div>
+            <img src="/img/Safin-3.jpg" alt="">
+        </div>
+        <button id="prev"><i class="fas fa-3x fa-angle-double-left"></i></button>
+        <button id="next"><i class="fas fa-3x fa-angle-double-right"></i></button>
+    </div>
+     <hr>
+    <div class="video">
+       <video muted loop autoplay controls src="/Sadman Vedios/Sadman-1.mp4" class="sadman"></video>
+       <video muted loop autoplay controls src="/Sadman Vedios/Sadman-2.mp4" class="sadman"></video>
+       <video muted loop autoplay controls src="/Sadman Vedios/Sadman-3.mp4" class="sadman"></video>
+       <video muted loop autoplay controls src="/Sadman Vedios/Sadman-4.mp4" class="sadman"></video>
+       <video muted loop autoplay controls src="/Sadman Vedios/Sadman-5.mp4" class="sadman"></video>
+       <video muted loop autoplay controls src="/Sadman Vedios/Sadman-8 .mp4" class="sadman"></video>
+       <video muted loop autoplay controls src="/Sadman Vedios/Sadman-9 .mp4" class="sadman"></video>
+       <video muted loop autoplay controls src="/Sadman Vedios/Sadman-11.mp4" class="sadman"></video>
+       <video muted loop autoplay controls src="/Sadman Vedios/Sadman-12.mp4" class="sadman"></video>
+       <video muted loop autoplay controls src="/Sadman Vedios/Sadman-13.mp4" class="sadman"></video>
+    </div>
+    <hr>
+    <div style="margin-top: 30px;"></div>
+
+    <script>
+        setInterval(()=>{
+             if(document.getElementsByClassName("slider")[0].classList.contains("active")){
+                document.getElementsByClassName("slider")[1].classList.add("active");
+                document.getElementsByClassName("slider")[0].classList.remove("active")
+             }else if(document.getElementsByClassName("slider")[1].classList.contains("active")){
+                document.getElementsByClassName("slider")[2].classList.add("active");
+                document.getElementsByClassName("slider")[1].classList.remove("active")
+             }else if(document.getElementsByClassName("slider")[2].classList.contains("active")){
+                document.getElementsByClassName("slider")[3].classList.add("active");
+                document.getElementsByClassName("slider")[2].classList.remove("active")
+             }else if(document.getElementsByClassName("slider")[3].classList.contains("active")){
+                document.getElementsByClassName("slider")[0].classList.add("active");
+                document.getElementsByClassName("slider")[3].classList.remove("active")
+             }
+        },4000)
+    </script>
+
+    <script>
+       const next = document.getElementById("next");
+       const prev = document.getElementById("prev");
+
+
+       next.addEventListener("click",()=>{
+        if(document.getElementsByClassName("slider")[0].classList.contains("active")){
+                document.getElementsByClassName("slider")[1].classList.add("active");
+                document.getElementsByClassName("slider")[0].classList.remove("active")
+             }else if(document.getElementsByClassName("slider")[1].classList.contains("active")){
+                document.getElementsByClassName("slider")[2].classList.add("active");
+                document.getElementsByClassName("slider")[1].classList.remove("active")
+             }else if(document.getElementsByClassName("slider")[2].classList.contains("active")){
+                document.getElementsByClassName("slider")[3].classList.add("active");
+                document.getElementsByClassName("slider")[2].classList.remove("active")
+             }else if(document.getElementsByClassName("slider")[3].classList.contains("active")){
+                document.getElementsByClassName("slider")[0].classList.add("active");
+                document.getElementsByClassName("slider")[3].classList.remove("active")
+             }
+       })
+       prev.addEventListener("click",()=>{
+        if(document.getElementsByClassName("slider")[0].classList.contains("active")){
+                document.getElementsByClassName("slider")[3].classList.add("active");
+                document.getElementsByClassName("slider")[0].classList.remove("active")
+             }else if(document.getElementsByClassName("slider")[3].classList.contains("active")){
+                document.getElementsByClassName("slider")[2].classList.add("active");
+                document.getElementsByClassName("slider")[3].classList.remove("active")
+             }else if(document.getElementsByClassName("slider")[2].classList.contains("active")){
+                document.getElementsByClassName("slider")[1].classList.add("active");
+                document.getElementsByClassName("slider")[2].classList.remove("active")
+             }else if(document.getElementsByClassName("slider")[1].classList.contains("active")){
+                document.getElementsByClassName("slider")[0].classList.add("active");
+                document.getElementsByClassName("slider")[1].classList.remove("active")
+             }
+       })
+    </script>
+</body>
+</html>
